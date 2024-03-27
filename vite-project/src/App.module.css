@@ -1,0 +1,29 @@
+.form {
+  background-color: #bfbfbf;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form label {
+  font-size: 30px;
+}
+.form input {
+  background-color: #000;
+  border-radius: 10px;
+  padding: 10px 0px;
+  border: none;
+  width: 100%;
+  /* color: black; */
+  color: #fff;
+}
+.form button{
+    margin-top: 10px;
+    background-color: #ff421a;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.form button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.table {
+  /* background-color: ; */
+  margin-top: 20px;
+  /* padding-top: 20px; */
+  border-top: 3px solid #ff421a;
+}
+.table table {
+  width: 100%;
+  border: 1px solid #000;
+}
+.table .center {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+.img img {
+  width: 200px;
+  height: auto;
+}
