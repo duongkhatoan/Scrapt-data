@@ -30,10 +30,10 @@ function App() {
     if (!htmlContent) return;
 
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet(htmlContent, { origin: "A2" });
-    XLSX.utils.sheet_add_aoa(ws, [[htmlContent.monthAndYear]], {
-      origin: "A1",
-    });
+    const ws = XLSX.utils.json_to_sheet(htmlContent);
+    // XLSX.utils.sheet_add_aoa(ws, [[htmlContent.monthAndYear]], {
+    //   origin: "A1",
+    // });
     XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
     XLSX.writeFile(wb, "data.xlsx");
   };
@@ -73,6 +73,7 @@ function App() {
                   <th>Month</th>
                   <th>date</th>
                   <th>lunar-date</th>
+                  <th>Month-year</th>
                 </tr>
               </thead>
               <tbody>
@@ -82,6 +83,7 @@ function App() {
                       <td>{item.month}</td>
                       <td>{item.date}</td>
                       <td>{item.lunarDate}</td>
+                      <td>{item.monthAndYear}</td>
                     </tr>
                   );
                 })}

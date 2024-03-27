@@ -10,17 +10,16 @@ async function fetchHtmlFromUrl(url) {
 
     const data = [];
     monthItems.each((index, element) => {
+      const monthAndYear = $(element).find("th").first().text().trim();
       const ausinfo = $(element).find(".ausinfo");
       ausinfo.each((index, element) => {
         const month = $(element).find("small").text().trim();
         const date = $(element).find(".h2").text().trim();
         const lunarDate = $(element).find("td:nth-child(3)").text().trim();
 
-        data.push({ month, date, lunarDate });
+        data.push({ month, date, lunarDate, monthAndYear });
       });
     });
-    const monthAndYear = monthItems.find("th").first().text().trim();
-    data["monthAndYear"] = monthAndYear;
 
     return data;
   } catch (error) {
